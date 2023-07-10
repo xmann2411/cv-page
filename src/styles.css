@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(196, 243, 255);
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+h2 {
+  margin-left: 40%;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 1100px;
+  margin: 40px;
+  border: 4px solid #222;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 24px;
+  /* row-gap: 32px; */
+  align-items: center;
+}
+
+.card::after {
+  content: "";
+  display: block;
+}
+
+.name {
+  margin-bottom: 24px;
+  font-family: sans-serif;
+}
+
+.avatar {
+  width: 100%;
+  display: block;
+}
+
+.data {
+  font-family: "IBM Plex Mono", sans-serif;
+  padding: 32px;
+  padding-top: 0px;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill {
+  padding: 2px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+/* poslovi */
+
+.accordion {
+  font-family: sans-serif;
+  width: 700px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 20px 24px;
+  padding-right: 48px;
+  cursor: pointer;
+
+  /* border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff; */
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+}
+
+.item-project {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 20px 24px;
+  padding-right: 48px;
+  cursor: pointer;
+}
+
+.icon {
+  align-self: flex-end;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 500;
+  color: #b3bac0;
+}
+
+.title,
+.icon {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.content-box {
+  grid-column: 2 / -1;
+  padding-bottom: 16px;
+  line-height: 1.6;
+}
+.outcome,
+.date,
+.content-box ul {
+  color: #5d6368;
+  margin-left: 16px;
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* OPEN STATE */
+.open {
+  border-top: 4px solid darkgreen;
+  color: #5d6368;
+}
+
+.open .number,
+.open .title {
+  color: darkgreen;
+}
+
+.open-project {
+  border-top: 4px solid darkblue;
+}
+
+.open-project .title {
+  color: darkblue;
+}
+
+.open-project .date {
+  font-size: 20px;
+}
